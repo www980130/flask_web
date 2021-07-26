@@ -9,8 +9,14 @@ app.debug = True #파일 저장할 때마다 서버 restart하려면 debug 설�
 def hello_world(): #함수 생성
     # return 'Hello World!'
     # return render_template('index.html', data = "안녕하세요 김태경 입니다.")
-    articles = Articles()
+    
+    articles = Articles() #articles는 리스트
+    # print(articles)
+    
     # return render_template('index.html', data = "Main Page")
+
+    for i in articles:
+        print(i['title'])
     return render_template('index.html', articles = articles)
 
 #내장변수가 name이면 다음 함수를 실행시켜라
